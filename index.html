@@ -21,25 +21,23 @@
 
     <!-- define your gltf asset -->
     <a-assets>
-      <a-asset-item id="scene" src="models/scene.gltf"></a-asset-item>
-      <a-asset-item id="school" src="models/school.gltf"></a-asset-item>
+      <a-asset-item id="school" src="models/school/school.gltf"></a-asset-item>
     </a-assets>
 
     <!-- we put the content into a markers -->
     <a-marker preset='custom' type='pattern' url="markers/pattern-hiro.patt">
-      <!-- use your gltf model -->
-      <a-entity gltf-model="#scene" scale="0.5 0.5 0.5" position="0 0.5 0">
-        <!-- animation in gltf model -->
-        <a-animation attribute="rotation" to="0 360 0" dur="3000" easing="linear" repeat="indefinite">
-        </a-animation>
-      </a-entity>
+      <a-box scale="0.5 0.5 0.5" position="0 0.5 0" material='color: green;'></a-box>
     </a-marker>
 
 
     <!-- content into a marker -->
     <a-marker preset='custom' type='pattern' url='./markers/pattern-kanji.patt'>
       <!-- use your gltf model -->
-      <a-entity gltf-model="#school" scale="0.2 0.2 0.2" position="0 0.5 0"></a-entity>
+      <a-entity gltf-model="#school" scale="0.2 0.2 0.2" position="0 0.5 0">
+        <!-- animation in gltf model -->
+        <a-animation attribute="rotation" to="0 360 0" dur="3000" easing="linear" repeat="indefinite">
+        </a-animation>
+      </a-entity>
     </a-marker>
 
 
