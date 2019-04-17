@@ -22,6 +22,7 @@
     <!-- define your gltf asset -->
     <a-assets>
       <a-asset-item id="scene" src="models/scene.gltf"></a-asset-item>
+      <a-asset-item id="school" src="models/school.gltf"></a-asset-item>
     </a-assets>
 
     <!-- we put the content into a markers -->
@@ -37,19 +38,34 @@
 
     <!-- content into a marker -->
     <a-marker preset='custom' type='pattern' url='./markers/pattern-kanji.patt'>
-      <a-box scale="0.5 0.5 0.5" position="0 0.5 0" material='color: green;'></a-box>
+      <!-- use your gltf model -->
+      <a-entity gltf-model="#school" scale="0.2 0.2 0.2" position="0 0.5 0"></a-entity>
     </a-marker>
+
+
     <!-- content into a marker -->
     <a-marker preset='custom' type='pattern' url='./markers/pattern-letterA.patt'>
       <a-box scale="0.5 0.5 0.5" position="0 0.5 0" material='color: blue;'></a-box>
     </a-marker>
     <!-- content into a marker -->
     <a-marker preset='custom' type='pattern' url='./markers/pattern-letterB.patt'>
-      <a-box scale="0.5 0.5 0.5" position="0 0.5 0" material='color: blue;'></a-box>
+      <a-box scale="0.5 0.5 0.5" position="0 0.5 0" material='color: red;'></a-box>
     </a-marker>
     <!-- content into a marker -->
     <a-marker preset='custom' type='pattern' url='./markers/pattern-letterC.patt'>
-      <a-box scale="0.5 0.5 0.5" position="0 0.5 0" material='color: blue;'></a-box>
+      <a-box scale="0.5 0.5 0.5" position="0 0.5 0" material='color: yellow;'></a-box>
+    </a-marker>
+    <!-- content into a marker -->
+    <a-marker preset='custom' type='pattern' url='./markers/pattern-letterD.patt'>
+      <a-box scale="0.5 0.5 0.5" position="0 0.5 0" material='color: orange;'></a-box>
+    </a-marker>
+    <!-- content into a marker -->
+    <a-marker preset='custom' type='pattern' url='./markers/pattern-letterF.patt'>
+      <a-box scale="0.5 0.5 0.5" position="0 0.5 0" material='color: black;'></a-box>
+    </a-marker>
+    <!-- content into a marker -->
+    <a-marker preset='custom' type='pattern' url='./markers/pattern-letterG.patt'>
+      <a-box scale="0.5 0.5 0.5" position="0 0.5 0" material='color: white;'></a-box>
     </a-marker>
 
 
