@@ -15,62 +15,66 @@
 </head>
 
 <body>
+  <div class="ar-app">
+    <!-- We define a scene -->
+    <a-scene embedded arjs="debugUIEnabled:false; sourceType: webcam;" vr-mode-ui="enabled: true">
 
-  <!-- We define a scene -->
-  <a-scene embedded arjs="debugUIEnabled:false; sourceType: webcam;" vr-mode-ui="enabled: true">
+      <!-- define your gltf asset -->
+      <a-assets>
+        <a-asset-item id="school" src="models/school/scene.gltf"></a-asset-item>
+      </a-assets>
 
-    <!-- define your gltf asset -->
-    <a-assets>
-      <a-asset-item id="school" src="models/school/scene.gltf"></a-asset-item>
-    </a-assets>
-
-    <!-- we put the content into a markers -->
-    <a-marker preset='custom' type='pattern' url="markers/pattern-hiro.patt">
-      <a-box scale="0.5 0.5 0.5" position="0 0.5 0" material='color: green;'></a-box>
-    </a-marker>
-
-
-    <!-- content into a marker -->
-    <a-marker preset='custom' type='pattern' url='./markers/pattern-kanji.patt'>
-      <!-- use your gltf model -->
-      <a-entity gltf-model="#school" scale=".2 .2 .2" >
-        <!-- animation in gltf model -->
-        <a-animation attribute="rotation" to="0 360 0" dur="3000" easing="linear" repeat="indefinite">
-        </a-animation>
-      </a-entity>
-    </a-marker>
+      <!-- we put the content into a markers -->
+      <a-marker preset='custom' type='pattern' url="markers/pattern-hiro.patt">
+        <a-box scale="0.5 0.5 0.5" position="0 0.5 0" material='color: green;'></a-box>
+      </a-marker>
 
 
-    <!-- content into a marker -->
-    <a-marker preset='custom' type='pattern' url='./markers/pattern-letterA.patt'>
-      <a-box scale="0.5 0.5 0.5" position="0 0.5 0" material='color: blue;'></a-box>
-    </a-marker>
-    <!-- content into a marker -->
-    <a-marker preset='custom' type='pattern' url='./markers/pattern-letterB.patt'>
-      <a-box scale="0.5 0.5 0.5" position="0 0.5 0" material='color: red;'></a-box>
-    </a-marker>
-    <!-- content into a marker -->
-    <a-marker preset='custom' type='pattern' url='./markers/pattern-letterC.patt'>
-      <a-box scale="0.5 0.5 0.5" position="0 0.5 0" material='color: yellow;'></a-box>
-    </a-marker>
-    <!-- content into a marker -->
-    <a-marker preset='custom' type='pattern' url='./markers/pattern-letterD.patt'>
-      <a-box scale="0.5 0.5 0.5" position="0 0.5 0" material='color: orange;'></a-box>
-    </a-marker>
-    <!-- content into a marker -->
-    <a-marker preset='custom' type='pattern' url='./markers/pattern-letterF.patt'>
-      <a-box scale="0.5 0.5 0.5" position="0 0.5 0" material='color: black;'></a-box>
-    </a-marker>
-    <!-- content into a marker -->
-    <a-marker preset='custom' type='pattern' url='./markers/pattern-letterG.patt'>
-      <a-box scale="0.5 0.5 0.5" position="0 0.5 0" material='color: white;'></a-box>
-    </a-marker>
+      <!-- content into a marker -->
+      <a-marker preset='custom' type='pattern' url='./markers/pattern-kanji.patt'>
+        <!-- use your gltf model -->
+        <a-entity gltf-model="#school" scale=".2 .2 .2">
+          <!-- animation in gltf model -->
+          <a-animation attribute="rotation" to="0 360 0" dur="3000" easing="linear" repeat="indefinite">
+          </a-animation>
+        </a-entity>
+      </a-marker>
 
 
-    <!-- add a basic camera -->
-    <a-entity camera></a-entity>
+      <!-- content into a marker -->
+      <a-marker preset='custom' type='pattern' url='./markers/pattern-letterA.patt'>
+        <a-box scale="0.5 0.5 0.5" position="0 0.5 0" material='color: blue;'></a-box>
+      </a-marker>
+      <!-- content into a marker -->
+      <a-marker preset='custom' type='pattern' url='./markers/pattern-letterB.patt'>
+        <a-box scale="0.5 0.5 0.5" position="0 0.5 0" material='color: red;'></a-box>
+      </a-marker>
+      <!-- content into a marker -->
+      <a-marker preset='custom' type='pattern' url='./markers/pattern-letterC.patt'>
+        <a-box scale="0.5 0.5 0.5" position="0 0.5 0" material='color: yellow;'></a-box>
+      </a-marker>
+      <!-- content into a marker -->
+      <a-marker preset='custom' type='pattern' url='./markers/pattern-letterD.patt'>
+        <a-box scale="0.5 0.5 0.5" position="0 0.5 0" material='color: orange;'></a-box>
+      </a-marker>
+      <!-- content into a marker -->
+      <a-marker preset='custom' type='pattern' url='./markers/pattern-letterF.patt'>
+        <a-box scale="0.5 0.5 0.5" position="0 0.5 0" material='color: black;'></a-box>
+      </a-marker>
+      <!-- content into a marker -->
+      <a-marker preset='custom' type='pattern' url='./markers/pattern-letterG.patt'>
+        <a-box scale="0.5 0.5 0.5" position="0 0.5 0" material='color: white;'></a-box>
+      </a-marker>
 
-  </a-scene>
+
+      <!-- add a basic camera -->
+      <a-entity camera></a-entity>
+
+    </a-scene>
+  </div>
+  <div class="form-user">
+
+  </div>
   <script src="./js/main.js"></script>
 </body>
 
